@@ -48,6 +48,11 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
     //activity
     implementation(libs.androidx.activity.ktx)
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    //coroutines
+    implementation(libs.kotlinx.coroutines.android)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
