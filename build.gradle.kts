@@ -2,4 +2,6 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    //dagger and hilt - plugin version 3.35
+    alias(libs.plugins.dagger.hilt) apply  false
 }

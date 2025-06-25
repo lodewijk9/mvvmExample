@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    // kotlin kapt
+    kotlin("kapt")
+    // dagger hilt plugin
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -53,6 +57,9 @@ dependencies {
     implementation(libs.converter.gson)
     //coroutines
     implementation(libs.kotlinx.coroutines.android)
+    //dagger hilt y kapt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -63,3 +70,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
