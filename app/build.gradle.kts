@@ -60,6 +60,9 @@ dependencies {
     //dagger hilt y kapt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    //room
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
