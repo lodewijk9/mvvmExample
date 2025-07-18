@@ -7,7 +7,6 @@ import com.example.mvvmexample.domain.GetQuotesUseCase
 import com.example.mvvmexample.domain.GetRandomQuoteUseCase
 import com.example.mvvmexample.domain.model.Quote
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -35,7 +34,6 @@ class QuoteViewModel @Inject constructor(
     fun onCreate() {
         viewModelScope.launch {
             isLoading.postValue(true)
-            delay(2000)
             val result = getQuotesUseCase()
             if (!result.isNullOrEmpty()) {
                 quoteModel.postValue(result[0])
